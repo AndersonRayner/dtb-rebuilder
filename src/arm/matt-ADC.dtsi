@@ -3,12 +3,11 @@
 
 &tscadc {
     status = "okay";
+    adc {
+        ti,adc-channels = <0 1 2 3 4 5 6>;
+    };
 };
 
-&am335x_adc {
-    ti,adc-channels = <0 1 2 3 4 5 6 7>;
-};
 
-
-/* From https://gist.github.com/matthewmcneely/bf44655c74096ff96475 */
+/* https://groups.google.com/forum/#!topic/beagleboard/_dIExDWWkoQ */
 /* Check using /sys/bus/iio */
