@@ -10,35 +10,10 @@
             BONE_P9_27 0x7   /* gpio3_19 Cape led */
             >;
     };
-    
-    ctrl_pins: pinmux_ctrl_pins {
-            pinctrl-single,pins = <
-            BONE_P9_15  0x7   /* gpio1_16 Reset cards      | OUTPUT | PULLUP | MODE7 */
-            >;
-    };
-
-    timing_pins: pinmux_timing_pins {
-            pinctrl-single,pins = <
-            BONE_P8_11 0x7    /* gpio1_13 sync out 100 Hz | OUTPUT | PULLDOWN |   */
-            >;
-    };
 };
 
 
 &ocp {
-		cape-leds {
-			compatible = "gpio-leds";
-			pinctrl-names = "default";
-			pinctrl-0 = <&capeled_pins>;
-			
-			led0 {
-				label = "cape:white:activity";
-				gpios = <&gpio3 19 0>;	/* Why is the gpio here from 1 to 4? Not sense...*/
-				default-state = "off";
-				linux,default-trigger = "heartbeat";
-			};
-		};
-        
 		ctrl-pins {
 			compatible = "bone-pinmux-helper";
 			pinctrl-names = "default";
