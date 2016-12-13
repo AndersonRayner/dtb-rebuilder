@@ -21,17 +21,17 @@
 
 
 &ocp {        
-		ctrl-pins {
-			compatible = "bone-pinmux-helper";
-			pinctrl-names = "default";
-			pinctrl-0 = <&ctrl_pins>;
-			status = "okay";
-		};
+        ctrl-pins {
+            compatible = "bone-pinmux-helper";
+            pinctrl-names = "default";
+            pinctrl-0 = <&ctrl_pins>;
+            status = "okay";
+        };
 
-		timing-pins {
-			compatible = "bone-pinmux-helper";
-			pinctrl-names = "default";
-			pinctrl-0 = <&timing_pins>;
-			status = "okay";
-		};
+        timing-pins {
+            compatible = "bone-pinmux-helper";
+            pinctrl-names = "default";
+            pinctrl-0 = <&timing_pins>;
+            status = "okay";
+        };
 };

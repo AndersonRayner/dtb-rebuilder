@@ -6,57 +6,57 @@
 
     spi_cs_pins: pinmux_spi_cs_pins {
         pinctrl-single,pins = <
-            BONE_P9_14 0x17	/* gpio1_18 C0 | OUTPUT | PULLUP| MODE7 */
-            BONE_P9_16 0x17	/* gpio1_19 C1 | OUTPUT | PULLUP| MODE7 */
-          /*  BONE_P9_12 0x17	*//* gpio1_28 C2 | OUTPUT | PULLUP| MODE7 (kai Only) */
+            BONE_P9_14 0x17    /* gpio1_18 C0 | OUTPUT | PULLUP| MODE7 */
+            BONE_P9_16 0x17    /* gpio1_19 C1 | OUTPUT | PULLUP| MODE7 */
+          /*  BONE_P9_12 0x17    *//* gpio1_28 C2 | OUTPUT | PULLUP| MODE7 (kai Only) */
         >;
     };
     
-	spi1_pins: pinmux_spi1_pins {
-		pinctrl-single,pins = <
-			BONE_P9_31  (PIN_INPUT_PULLUP  | MUX_MODE3)   /* P9_31: mcasp0_aclkx.spi1_sclk */
-			BONE_P9_29  (PIN_INPUT_PULLUP  | MUX_MODE3)   /* P9_29: mcasp0_fsx.spi1_d0 */
-			BONE_P9_30  (PIN_OUTPUT_PULLUP | MUX_MODE3)   /* P9_30: mcasp0_axr0.spi1_d1 */
-			BONE_P9_28  (PIN_OUTPUT_PULLUP | MUX_MODE3)   /* P9_28: mcasp0_ahclkr.spi1_cs0 */
-		>;
-	};
+    spi1_pins: pinmux_spi1_pins {
+        pinctrl-single,pins = <
+            BONE_P9_31  (PIN_INPUT_PULLUP  | MUX_MODE3)   /* P9_31: mcasp0_aclkx.spi1_sclk */
+            BONE_P9_29  (PIN_INPUT_PULLUP  | MUX_MODE3)   /* P9_29: mcasp0_fsx.spi1_d0 */
+            BONE_P9_30  (PIN_OUTPUT_PULLUP | MUX_MODE3)   /* P9_30: mcasp0_axr0.spi1_d1 */
+            BONE_P9_28  (PIN_OUTPUT_PULLUP | MUX_MODE3)   /* P9_28: mcasp0_ahclkr.spi1_cs0 */
+        >;
+    };
 };
 
 &ocp {
-		cs-sel-pins {
-			compatible = "bone-pinmux-helper";
-			pinctrl-names = "default";
-			pinctrl-0 = <&spi_cs_pins>;
-			status = "okay";
-		};
+        cs-sel-pins {
+            compatible = "bone-pinmux-helper";
+            pinctrl-names = "default";
+            pinctrl-0 = <&spi_cs_pins>;
+            status = "okay";
+        };
 
 };
 
-&spi1 {	
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&spi1_pins>;
+&spi1 {    
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&spi1_pins>;
 
 
-	channel@0 {
-		#address-cells = <1>;
-		#size-cells = <0>;
+    channel@0 {
+        #address-cells = <1>;
+        #size-cells = <0>;
 
-		compatible = "spidev";
+        compatible = "spidev";
 
-		reg = <0>;
-		spi-max-frequency = <16000000>;
-		spi-cpha;
-	};
+        reg = <0>;
+        spi-max-frequency = <16000000>;
+        spi-cpha;
+    };
 
 
-	channel@1 {
-		#address-cells = <1>;
-		#size-cells = <0>;
+    channel@1 {
+        #address-cells = <1>;
+        #size-cells = <0>;
 
-		compatible = "spidev";
+        compatible = "spidev";
 
-		reg = <1>;
-		spi-max-frequency = <16000000>;
-	};
+        reg = <1>;
+        spi-max-frequency = <16000000>;
+    };
 };

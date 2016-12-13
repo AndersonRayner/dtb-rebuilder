@@ -12,19 +12,19 @@
 
 
 &i2c2 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&i2c2_pins>;
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&i2c2_pins>;
 
-	clock-frequency = <400000>;
-		
-	rtc_cape: rtc@68 {
-	compatible = "dallas,ds1307";
-	reg = <0x68>;
-	};
+    clock-frequency = <400000>;
+        
+    rtc_cape: rtc@68 {
+    compatible = "dallas,ds1307";
+    reg = <0x68>;
+    };
 };
 
 &rtc {
-	status = "disabled"; /* Disable BBB rtc for cape clock */
+    status = "disabled"; /* Disable BBB rtc for cape clock */
 };
 

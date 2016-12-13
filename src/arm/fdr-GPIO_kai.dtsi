@@ -5,17 +5,17 @@
 &am33xx_pinmux {
     ctrl_pins: pinmux_ctrl_pins {
         pinctrl-single,pins = <
-            0x3c  0xf	/* gpio1_15 Reset cards      | OUTPUT | NA | MODE7 */
-            0x1ac 0xf	/* gpio3_21 Reset clock mcu  | OUTPUT | NA | MODE7 */
+            0x3c  0xf        /* gpio1_15 Reset cards      | OUTPUT | NA | MODE7 */
+            0x1ac 0xf        /* gpio3_21 Reset clock mcu  | OUTPUT | NA | MODE7 */
         >;
     };
-    
-    		timing_pins: pinmux_timing_pins {
-			pinctrl-single,pins = <
-				0x44 0x27	/* gpio1_17 sync in 100Hz   | INPUT  | PULLDOWN |   */
-				0x40 0x3f	/* gpio1_16 1pps in         | INPUT  | EXT PULLUP | */
-				0x34 0x7	/* gpio1_13 sync out 100 Hz | OUTPUT | PULLDOWN |   */
-			>;
-		};
-        
+
+            timing_pins: pinmux_timing_pins {
+            pinctrl-single,pins = <
+                0x44 0x27    /* gpio1_17 sync in 100Hz   | INPUT  | PULLDOWN |   */
+                0x40 0x3f    /* gpio1_16 1pps in         | INPUT  | EXT PULLUP | */
+                0x34 0x7     /* gpio1_13 sync out 100 Hz | OUTPUT | PULLDOWN |   */
+            >;
+        };
+
 };

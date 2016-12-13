@@ -5,14 +5,14 @@
 &am33xx_pinmux {
     uart2_pins: pinmux_uart2_pins {
         pinctrl-single,pins = <
-            BONE_P9_22 0x21	/* spi0_sclk.uart2_rxd 		 | INPUT  | MODE1 */
-            BONE_P9_21 0x01	/* spi0_d0.uart2_txd 		 | OUTPUT | MODE1 */
+            BONE_P9_22 0x21    /* spi0_sclk.uart2_rxd          | INPUT  | MODE1 */
+            BONE_P9_21 0x01    /* spi0_d0.uart2_txd          | OUTPUT | MODE1 */
         >;
     };
 };
 
 &uart2 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart2_pins>;
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&uart2_pins>;
 };

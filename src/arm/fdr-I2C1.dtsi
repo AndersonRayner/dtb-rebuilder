@@ -2,19 +2,19 @@
 #include <dt-bindings/pinctrl/am33xx.h>
 
 &am33xx_pinmux {
-		i2c1_pins: pinmux_i2c1_pins {
-			pinctrl-single,pins = <
-				BONE_P9_18 0x72	/* spi0_d1.i2c1_sda, SLEWCTRL_SLOW | INPUT_PULLUP | MODE2 */
-				BONE_P9_17 0x72	/* spi0_cs0.i2c1_scl, SLEWCTRL_SLOW | INPUT_PULLUP | MODE2 */
-			>;
-		};
+        i2c1_pins: pinmux_i2c1_pins {
+            pinctrl-single,pins = <
+                BONE_P9_18 0x72    /* spi0_d1.i2c1_sda, SLEWCTRL_SLOW | INPUT_PULLUP | MODE2 */
+                BONE_P9_17 0x72    /* spi0_cs0.i2c1_scl, SLEWCTRL_SLOW | INPUT_PULLUP | MODE2 */
+            >;
+        };
 };
 
 &i2c1 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&i2c1_pins>;
-	
-	clock-frequency = <400000>;
-	
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&i2c1_pins>;
+    
+    clock-frequency = <400000>;
+    
 };
