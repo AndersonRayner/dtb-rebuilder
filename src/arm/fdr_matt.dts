@@ -7,16 +7,16 @@
 #include <dt-bindings/board/am335x-bbw-bbb-base.h>
 #include <dt-bindings/pinctrl/am33xx.h>
 
-#include "matt-ADC.dtsi"
+#include "fdr-ADC.dtsi"
 #include "fdr-GPIO_matt.dtsi"
 #include "fdr-GPIO_common.dtsi"
-#include "matt-I2C1.dtsi"
-#include "matt-I2C2.dtsi"
-#include "matt-SPI1.dtsi"
-#include "matt-UART1.dtsi"
-#include "matt-UART2.dtsi"
-#include "matt-UART4.dtsi"
-#include "matt-UART5.dtsi"
+#include "fdr-I2C1.dtsi"
+#include "fdr-I2C2.dtsi"
+#include "fdr-SPI1.dtsi"
+#include "fdr-UART1.dtsi"
+#include "fdr-UART2.dtsi"
+#include "fdr-UART4.dtsi"
+#include "fdr-UART5.dtsi"
 
 
 / {
