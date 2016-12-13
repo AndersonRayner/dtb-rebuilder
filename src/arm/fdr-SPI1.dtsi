@@ -8,7 +8,7 @@
         pinctrl-single,pins = <
             BONE_P9_14 0x17	/* gpio1_18 C0 | OUTPUT | PULLUP| MODE7 */
             BONE_P9_16 0x17	/* gpio1_19 C1 | OUTPUT | PULLUP| MODE7 */
-            BONE_P9_12 0x17	/* gpio1_28 C2 | OUTPUT | PULLUP| MODE7 */
+          /*  BONE_P9_12 0x17	*//* gpio1_28 C2 | OUTPUT | PULLUP| MODE7 (kai Only) */
         >;
     };
     
