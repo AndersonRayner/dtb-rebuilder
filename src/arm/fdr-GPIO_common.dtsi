@@ -27,4 +27,18 @@
 			pinctrl-0 = <&timing_pins>;
 			status = "okay";
 		};
+        
+		cape-leds {
+			compatible = "gpio-leds";
+			pinctrl-names = "default";
+			pinctrl-0 = <&capeled_pins>;
+			
+			led0 {
+				label = "cape:white:activity";
+				gpios = <&gpio3 19 0>;
+				default-state = "off";
+				linux,default-trigger = "heartbeat";
+			};
+		};
+		
 };
