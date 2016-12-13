@@ -1,0 +1,19 @@
+#include <dt-bindings/board/am335x-bbw-bbb-base.h>
+#include <dt-bindings/pinctrl/am33xx.h>
+
+
+&am33xx_pinmux {
+    uart1_pins: pinmux_uart1_pins {
+        pinctrl-single,pins = <
+            BONE_P9_26 0x20 	/* P9.26 uart1_rxd.uart1_rxd |  INPUT  | MODE0 */
+            BONE_P9_24 0x0 	/* P9.24 uart1_txd.uart1_txd | OUTPUT  | MODE0 */
+        >;
+    };
+};
+
+&uart1 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart1_pins>;
+};
+

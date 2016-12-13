@@ -1,0 +1,13 @@
+#include <dt-bindings/board/am335x-bbw-bbb-base.h>
+#include <dt-bindings/pinctrl/am33xx.h>
+
+&tscadc {
+    status = "okay";
+    adc {
+        ti,adc-channels = <0 2>;
+    };
+};
+
+
+/* https://groups.google.com/forum/#!topic/beagleboard/_dIExDWWkoQ */
+/* Check using /sys/bus/iio */
